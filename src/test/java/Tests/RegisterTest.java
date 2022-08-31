@@ -44,13 +44,16 @@ public class RegisterTest {
          WebElement HobbiesElement2 = driver.findElement(By.xpath("//input[@id='checkbox3']"));
          HobbiesElement2.click();
 
-         WebElement LanguagesElement = driver.findElement(By.cssSelector("div[id='msdd']"));
-         LanguagesElement.click();
+        // WebElement LanguagesElement = driver.findElement(By.cssSelector("div[id='msdd']"));
+        // LanguagesElement.click();
 
+         WebElement PasswordElement = driver.findElement(By.xpath("//input[@id='firstpassword']"));
+         String PasswordValue = "LapteParajit4";
+         PasswordElement.sendKeys(PasswordValue);
 
-         //WebElement SkillsElement = driver.findElement(By.xpath("//option[@value=AutoCAD"));
-         //SkillsElement.click();
-
+         WebElement ConfirmPasswordElement = driver.findElement(By.cssSelector("input[id='secondpassword'"));
+         String ConfirmPasswordValue = "LapteParajit4";
+         ConfirmPasswordElement.sendKeys(ConfirmPasswordValue);
 
 
 
