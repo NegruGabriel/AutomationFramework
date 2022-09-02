@@ -15,45 +15,46 @@ public class RegisterTest {
      driver.get("https://demo.automationtesting.in/Register.html");
      driver.manage().window().maximize();
 
-         WebElement FirstNameElement = driver.findElement(By.cssSelector("input[placeholder='First Name']"));
-         String FirstNameValue ="Florin";
-         FirstNameElement.sendKeys(FirstNameValue);
+     WebElement FirstNameElement = driver.findElement(By.xpath("//input[@placeholder='First Name']"));
+     String FirstNameValue = "Andrei";
+     FirstNameElement.sendKeys(FirstNameValue);
 
-         WebElement LastNameElement = driver.findElement(By.xpath("//input[@placeholder='Last Name']"));
-         String LastNameValue ="Oancea";
-         LastNameElement.sendKeys(LastNameValue);
+     WebElement LastNameElement = driver.findElement(By.cssSelector("input[placeholder='Last Name']"));
+     String LastNameValue = "Scripcaru";
+     LastNameElement.sendKeys(LastNameValue);
 
-         WebElement AddressElement = driver.findElement(By.cssSelector("textarea[rows='3']"));
-         String AddressValue ="Laminoristilor n18 Bloc C3 ap 21";
-         AddressElement.sendKeys(AddressValue);
+     WebElement AddressElement = driver.findElement(By.xpath("//textarea[@ng-model='Adress']"));
+     String AddressValue = "Strada Laminoristilor nr 15 Bloc C3 Am 21";
+     AddressElement.sendKeys(AddressValue);
 
-         WebElement EmailAddressElement = driver.findElement(By.xpath("//input[@type='email']"));
-         String EmailAddressValue = "casadehartie@yahoo.co.uk";
-         EmailAddressElement.sendKeys(EmailAddressValue);
+     WebElement EmailAddressElement = driver.findElement(By.cssSelector("input[type='email']"));
+     String EmailAddressValue = "andrei.sc@YAHOO.CO.UK";
+     EmailAddressElement.sendKeys(EmailAddressValue);
 
-         WebElement PhoneElement = driver.findElement(By.cssSelector("input[type='tel']"));
-         String PhoneValue = "0754879451";
-         PhoneElement.sendKeys(PhoneValue);
+     WebElement PhoneElement = driver.findElement(By.xpath("//input[@ng-model='Phone']"));
+     String PhoneValue = "0730058000";
+     PhoneElement.sendKeys(PhoneValue);
 
-         WebElement GenderElement = driver.findElement(By.xpath("//input[@value='Male']"));
-         GenderElement.click();
+     WebElement GenderElement = driver.findElement(By.cssSelector("input[value='Male']"));
+     GenderElement.click();
 
-         WebElement HobbiesElement =driver.findElement(By.cssSelector("input[id='checkbox2']"));
-         HobbiesElement.click();
+     WebElement Hobbies1Element = driver.findElement(By.xpath("//input[@id='checkbox1']"));
+     Hobbies1Element.click();
 
-         WebElement HobbiesElement2 = driver.findElement(By.xpath("//input[@id='checkbox3']"));
-         HobbiesElement2.click();
+     WebElement Hobbies2Element = driver.findElement(By.cssSelector("input[id='checkbox2']"));
+     Hobbies2Element.click();
 
-        // WebElement LanguagesElement = driver.findElement(By.cssSelector("div[id='msdd']"));
-        // LanguagesElement.click();
+     WebElement Hobbies3Element = driver.findElement(By.xpath("//input[@id='checkbox3']"));
+     Hobbies3Element.click();
 
-         WebElement PasswordElement = driver.findElement(By.xpath("//input[@id='firstpassword']"));
-         String PasswordValue = "LapteParajit4";
-         PasswordElement.sendKeys(PasswordValue);
+     WebElement PasswordElement = driver.findElement(By.cssSelector("input[id='firstpassword']"));
+     String PasswordValue = "parola buna";
+     PasswordElement.sendKeys(PasswordValue);
 
-         WebElement ConfirmPasswordElement = driver.findElement(By.cssSelector("input[id='secondpassword'"));
-         String ConfirmPasswordValue = "LapteParajit4";
-         ConfirmPasswordElement.sendKeys(ConfirmPasswordValue);
+     WebElement ConfirmPasswordElement = driver.findElement(By.xpath("//input[@id='secondpassword']"));
+     String ConfirmPasswordValue = "parola buna";
+     ConfirmPasswordElement.sendKeys(ConfirmPasswordValue);
+
 
 
 
